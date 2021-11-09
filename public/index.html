@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>D3n</title>
+	<link
+		href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,400;0,500;0,600;0,700;1,700&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="./site.css">
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script src="/assets/PageScroll.js"></script>
+	<link rel="stylesheet" href="/build/bundle.css">
+	<script defer src="/build/bundle.js"></script>
+</head>
+
+<body class="overflow-hidden">
+	<div class="overflow-hidden" id="pagescroll">
+
+	</div>
+	<script>
+		$(document).ready(function () {
+			new PageScroll('#pagescroll', {
+				nav: [
+					document.getElementById('landing'),
+					document.getElementById('techs'),
+					document.getElementById('refs'),
+					//document.getElementById('pricings-link'),
+					//document.getElementById('contacts-link')
+				]
+			})
+		})
+
+	</script>
+</body>
+
+</html>
