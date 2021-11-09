@@ -1,0 +1,127 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+:root {
+    /* CSS HEX */
+    /*
+    --blue-sapphire: #124d65ff;
+    --persian-green: #2A9D8Fff;
+    --maximum-yellow-red: #f7c250ff;
+    --sandy-brown: #E9C46Aff;
+    --portland-orange: #E76F51ff;
+    */
+    --dark-gray: #2b2b2bff;
+
+    /*darker version */
+    --blue-sapphire: #155d79ff;
+    --turquoise: #19c8b3ff;
+    --maximum-yellow-red: #f6bb3cff;
+    --princeton-orange: #fb8c37ff;
+    --portland-orange: #f55229ff;
+    --egyptian-blue: #2234abff;
+
+
+     --primary: var(--portland-orange);
+    --primary-lighter: var(--princeton-orange);
+    --middle: var(--maximum-yellow-red);
+    --secondary: var(--egyptian-blue);
+    --secondary-lighter: var(--turquoise);
+
+
+    --yellow-grey-red-1: #BB2020;
+    --yellow-grey-red-2: #06111C;
+    --yellow-grey-red-3: #BEC7C7;
+    --yellow-grey-red-4: #FFEB4D;
+    --yellow-grey-red-5: #121317;
+
+
+
+    /* Color Theme Swatches in Hex */
+    --gym-shoes-1: #E8E8DB;
+    --gym-shoes-2: #FFDF65;
+    --gym-shoes-3: #858377;
+    --gym-shoes-4: #636057;
+    --gym-shoes-5: #494846;
+}
+
+.bg-screen {
+    height: 100vh;
+}
+
+.text-blue-theme{
+    color:var(--secondary);
+}
+.text-blue-theme-inverse{
+    color:var(--secondary-lighter);
+}
+
+.bg {
+    background: linear-gradient(180deg, var(--primary) 50%, var(--primary) 50%, var(--primary-lighter) 50%);
+}
+
+.bg-dark-50 {
+    background: linear-gradient(180deg, var(--secondary) 50%, var(--dark-gray) 50%, var(--dark-gray) 50%);
+}
+
+.bg-33 {
+    background: linear-gradient(180deg, var(--secondary) 33%, var(--dark-gray) 33%, var(--dark-gray) 33%);
+}
+
+.bg-inv {
+    background: linear-gradient(90deg, var(--secondary-lighter) 50%, var(--secondary-lighter) 50%, var(--secondary) 50%);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#pagescroll {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.section {
+    height: 100vh;
+    width: 100%;
+    @apply p-10;
+    transition: transform 0.3s ease-out;
+}
+
+@screen md {
+    .section {
+        @apply p-0;
+    }
+}
+.controllers {
+    z-index: 999;
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+#control-up,
+#control-down {
+    cursor: pointer;
+    margin: 5px;
+    transform: scale(0.5);
+    transition: 0.2s;
+}
+
+#control-down {
+    transform: rotate(180deg) scale(0.5);
+}
+
+#control-down:hover {
+    transform: rotate(180deg) scale(0.7);
+}
+
+#control-up:hover {
+    transform: scale(0.7);
+}
