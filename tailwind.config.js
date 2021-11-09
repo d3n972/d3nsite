@@ -4,6 +4,8 @@ module.exports = {
     //mode: 'jit',
     purge: [
         './src/*.svelte',
+        './src/components/*.svelte',
+        './src/pages/*.svelte'
     ],
     theme: {
         extend: {
